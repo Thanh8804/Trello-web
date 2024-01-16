@@ -1,6 +1,6 @@
 //header trong cấu trúc html
 import Box from '@mui/system/Box'
-import ModeSelect from '../ModeSelect'
+import ModeSelect from '~/components/ModeSelect'
 
 function AppBar() {
   return (
