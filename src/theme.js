@@ -31,8 +31,45 @@ const theme = extendTheme({
           textTransform: 'none'
         }
       }
+    },
+
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: ({ theme }) => (
+          {
+            color: theme.palette.primary.main,
+            fontSize: '0.875rem',
+            '.MuiOutlinedInput-notchedOutline': { 
+              borderColor: theme.palette.primary.light
+            },
+            '&:hover':
+            {
+              '.MuiOutlinedInput-notchedOutline': {
+                borderColor: theme.palette.primary.main
+              }
+            }
+            // chi khi nao khach yeu cau  
+            // '& filedset': {
+            //   borderwidth: '1px !important'
+            // }
+          }
+        )
+      }
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        // Name of the slot
+        root: ({ theme }) => ({
+          // Some CSS
+          color: theme.palette.primary.main,
+          fontSize: '0.875rem'
+        })
+      }
     }
   }
+
+
   // ...other properties
 })
+
 export default theme
