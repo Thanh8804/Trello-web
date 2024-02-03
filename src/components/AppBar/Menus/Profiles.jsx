@@ -32,7 +32,7 @@ function Profiles() {
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
         >
-          <Avatar sx={{ width: 32, height: 32 }}
+          <Avatar sx={{ width: 34, height: 34 }}
             alt = "Đặng Chí Thành"
             src = "https://avatars.githubusercontent.com/u/112085795?s=96&v=4"
           />
