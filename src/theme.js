@@ -7,20 +7,20 @@ const theme = extendTheme({
     appBarHeight: '58px',
     boardBarHeight: '60px'
   },
-  colorSchemes: {
-    light: {
-      palette: {
-        primary: teal,
-        secondary:deepOrange
-      }
-    },
-    dark: {
-      palette: {
-        primary:cyan,
-        secondary:orange
-      }
-    }
-  },
+  // colorSchemes: {
+  //   light: {
+  //     palette: {
+  //       primary: teal,
+  //       secondary:deepOrange
+  //     }
+  //   },
+  //   dark: {
+  //     palette: {
+  //       primary:cyan,
+  //       secondary:orange
+  //     }
+  //   }
+  // },
   components: {
     // Name of the component
     MuiButton: {
@@ -28,46 +28,42 @@ const theme = extendTheme({
         // Name of the slot
         root: {
           // Some CSS
-          textTransform: 'none'
+          textTransform: 'none',
+          borderWidth: '1px'
         }
       }
-    },
+    }
+  },
 
-    MuiOutlinedInput: {
-      styleOverrides: {
-        root: ({ theme }) => (
-          {
-            color: theme.palette.primary.main,
-            fontSize: '0.875rem',
-            '.MuiOutlinedInput-notchedOutline': { 
-              borderColor: theme.palette.primary.light
-            },
-            '&:hover':
+  MuiOutlinedInput: {
+    styleOverrides: {
+      root:
+        {
+          // color: theme.palette.primary.main,
+          fontSize: '0.875rem',
+          '& fieldset':
             {
-              '.MuiOutlinedInput-notchedOutline': {
-                borderColor: theme.palette.primary.main
-              }
+              borderWidth: '0.5px !important'
+            },
+          '&.Mui-focused fieldset':
+            {
+              borderWidth: '1.5px !important'
+            },
+          '&:hover fieldset':
+            {
+              borderWidth: '1.5px !important'
             }
-            // chi khi nao khach yeu cau  
-            // '& filedset': {
-            //   borderwidth: '1px !important'
-            // }
-          }
-        )
-      }
-    },
-    MuiInputLabel: {
-      styleOverrides: {
-        // Name of the slot
-        root: ({ theme }) => ({
-          // Some CSS
-          color: theme.palette.primary.main,
-          fontSize: '0.875rem'
-        })
+        }
+    }
+  },
+
+  MuiInputLabel: {
+    styleOverrides: {
+      root: {
+        fontSize: '0.875rem'
       }
     }
   }
-
 
   // ...other properties
 })
