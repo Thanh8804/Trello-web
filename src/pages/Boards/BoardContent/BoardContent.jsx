@@ -1,15 +1,17 @@
 import Box from '@mui/system/Box'
+import React from 'react'
+import ListColumns from './ListColumns/ListColumns'
 
 function BoardContent() {
+
   return (
     <Box sx = {{
       backgroundColor: (theme) => (theme.palette.mode === 'dark' ? '#34495e' : '#1976d2'),
       width: '100%',
-      height: (theme) => `calc(100vh - ${ theme.trello.appBarHeight} - ${theme.trello.boardBarHeight})`,
-      display: 'flex',
-      alighItems: 'center'
+      height: (theme) => theme.trello.boardContentHeight,
+      p: '10px 0'
     }}>
-                            Borad center
+      <ListColumns />
     </Box>
   )
 }

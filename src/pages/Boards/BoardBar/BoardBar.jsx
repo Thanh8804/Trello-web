@@ -8,7 +8,7 @@ import FilterListIcon from '@mui/icons-material/FilterList'
 import Avatar from '@mui/material/Avatar'
 import AvatarGroup from '@mui/material/AvatarGroup'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
-import { Tooltip } from '@mui/material'
+import Tooltip from '@mui/material/Tooltip'
 import Button from '@mui/material/Button'
 
 const MENU_STYLES = {
@@ -29,14 +29,13 @@ function BoardBar() {
   return (
     <Box sx = {{
       width: '100%',
-      height: (theme) => theme.trello.appBarHeight,
+      height: (theme) => theme.trello.boardBarHeight,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
       paddingX: 2,
       gap: 2,
       overflowX: 'auto',
-      borderBottom: '1px solid #e0e0e0',
       backgroundColor: (theme) => (theme.palette.mode === 'dark' ? '#34495e' : '#1976d2')
     }}>
 
@@ -73,15 +72,15 @@ function BoardBar() {
 
       <Box sx = {{ display: 'flex', alignItems: 'center', gap: 2 }}>
         <Button
-          variant="outlined" 
+          variant="outlined"
           startIcon = {<PersonAddIcon />}
           sx =
-          {{
-            color: 'white',
-            borderColor: 'white',
-            '&:hover': { borderColor: 'white'}
-          }}
-        > Invite 
+            {{
+              color: 'white',
+              borderColor: 'white',
+              '&:hover': { borderColor: 'white' }
+            }}
+        > Invite
         </Button>
         <AvatarGroup
           max={4}
@@ -92,6 +91,9 @@ function BoardBar() {
               height: 36,
               fontSize: 16,
               border: 'none',
+              cursor: 'pointer',
+              color: 'white',
+              '&:first-of-type':{ bgcolor: '#a4b0be' }
             }
           }}
         >
