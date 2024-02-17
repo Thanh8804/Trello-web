@@ -1,8 +1,8 @@
 //board details
 import Container from '@mui/material/Container'
-import AppBar from '~/components/AppBar'
-import BoardBar from '~/pages/Boards/BoardBar'
-import BoardContent from './BoardContent' // cach cho cung cap
+import AppBar from '~/components/AppBar/AppBar'
+import BoardBar from '~/pages/Boards/BoardBar/BoardBar'
+import BoardContent from './BoardContent/BoardContent' // cach cho cung cap
 
 function Board() {
   return (
