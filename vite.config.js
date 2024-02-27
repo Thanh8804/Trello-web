@@ -8,10 +8,13 @@ export default defineConfig({
     react(),
     svgr()
   ],
+
+  base: '/',
+  
   resolve: {
     alias: [
       { find: '~', replacement: '/src' }
     ]
-  }
+  },
 })
 
