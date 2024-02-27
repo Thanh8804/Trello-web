@@ -1,8 +1,10 @@
 import Box from '@mui/system/Box'
 import React from 'react'
 import ListColumns from './ListColumns/ListColumns'
+import Column from './ListColumns/Column/Column'
 
-function BoardContent() {
+
+function BoardContent({ board }) {
 
   return (
     <Box sx = {{
@@ -11,7 +13,7 @@ function BoardContent() {
       height: (theme) => theme.trello.boardContentHeight,
       p: '10px 0'
     }}>
-      <ListColumns />
+      <ListColumns columns = {board?.columns} />
     </Box>
   )
 }
