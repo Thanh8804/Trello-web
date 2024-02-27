@@ -9,7 +9,7 @@ export default defineConfig({
     svgr()
   ],
 
-  base: '/Trello-web',
+  base: '/Trello-web/',
   
   resolve: {
     alias: [
