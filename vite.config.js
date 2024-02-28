@@ -10,11 +10,11 @@ export default defineConfig({
   ],
 
   base: '/Trello-web/',
-  
+
   resolve: {
     alias: [
       { find: '~', replacement: '/src' }
     ]
-  },
+  }
 })
 
