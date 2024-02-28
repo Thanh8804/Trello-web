@@ -17,12 +17,10 @@ jobs:
     name: Check formatting
     run: yarn run format:check
     steps:
-      
+      - name: Checkout repo
+      uses: actions/checkout@v3
       - name: Run Cypress
       uses: cypress-io/github-action@v2
-
-      - name: Checkout repo
-        uses: actions/checkout@v3
 
       - name: Setup Node
         uses: actions/setup-node@v3
