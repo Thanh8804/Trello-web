@@ -11,7 +11,16 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
 
+    name: Install dependencies
+    run: yarn install --frozen-lockfile
+    
+    name: Check formatting
+    run: yarn run format:check
     steps:
+      
+      - name: Run Cypress
+      uses: cypress-io/github-action@v2
+
       - name: Checkout repo
         uses: actions/checkout@v3
 
@@ -27,6 +36,9 @@ jobs:
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
+          working-directory: Trello-web
+          install: false
+          start: yarn serve
           name: production-files
           path: ./dist
 
